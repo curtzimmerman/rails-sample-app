@@ -18,6 +18,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
 			post_via_redirect users_path, user: { name: "Testing", email: "test@email.com", password: "123456", password_confirmation: "123456" }
 		end
 		assert_template 'users/show'
+		assert is_logged_in?
 		assert_not flash.empty?
 	end
 end
