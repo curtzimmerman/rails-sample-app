@@ -3,7 +3,7 @@ require 'test_helper'
 class SiteLayoutTest < ActionDispatch::IntegrationTest
   
   def setup
-    @user = users(:curt)
+    @user = users(:michael)
   end
 
   test "layout links" do
